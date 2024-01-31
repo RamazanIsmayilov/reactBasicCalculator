@@ -1,30 +1,58 @@
-import React from 'react'
-
+import React, { useState } from 'react'
 export const Calculator = () => {
+
+    const [operator, setOperator] = useState(null);
+
+
+    const resetFunc = () => {
+
+    }
+
+    const plusMinusFunc = () => {
+
+    }
+
+    const percentFunc = () => {
+
+    }
+
+    const operatorFunc = () => {
+
+    }
+
+    const numberFunc = () => {
+
+    }
+
+    const equalsFunc = () => {
+
+    }
+
+
     return (
         <div className='container'>
             <div className="calculator mt-5">
                 <input type="text" className='form-control' id='result' />
-                <div className="buttons mt-5">
-                        <button className="clear">C</button>
-                        <button className="operator" style={{backgroundColor: '#a2a2a2', color: '#000'}}>+/-</button>
-                        <button className="operator" style={{backgroundColor: '#a2a2a2', color: '#000'}}>%</button>
-                        <button className="operator">/</button>
-                        <button className="number">7</button>
-                        <button className="number">8</button>
-                        <button className="number">9</button>
-                        <button className="operator">*</button>
-                        <button className="number">4</button>
-                        <button className="number">5</button>
-                        <button className="number">6</button>
-                        <button className="operator">-</button>
-                        <button className="number">1</button>
-                        <button className="number">2</button>
-                        <button className="number">3</button>
-                        <button className="number">+</button>
-                        <button className="number" style={{gridColumn: 'span 2', borderRadius: '30px'}}>0</button>
-                        <button className="operator">,</button>
-                        <button className="equals">=</button>
+                <div className="buttons mt-4 gap-3">
+                    <button className="clear" onClick={resetFunc}>C</button>
+                    <button className="operator plus-minus" onClick={plusMinusFunc}>+/-</button>
+                    <button className="operator percentage" onClick={percentFunc}>%</button>
+                    <button className="operator" onClick={operatorFunc}>/</button>
+                    <button className="number" onClick={numberFunc}>7</button>
+                    <button className="number" onClick={numberFunc}>8</button>
+                    <button className="number" onClick={numberFunc}>9</button>
+                    <button className="operator" onClick={operatorFunc}>*</button>
+                    <button className="number" onClick={numberFunc}>4</button>
+                    <button className="number" onClick={numberFunc}>5</button>
+                    <button className="number" onClick={numberFunc}>6</button>
+                    <button className="operator" onClick={operatorFunc}>-</button>
+                    <button className="number" onClick={numberFunc}>1</button>
+                    <button className="number" onClick={numberFunc}>2</button>
+                    <button className="number" onClick={numberFunc}>3</button>
+                    <button className="operator" onClick={operatorFunc}>+</button>
+                    <button className="number zero" onClick={numberFunc}>0</button>
+                    <button className="decimal" onClick={numberFunc}>,</button>
+                    <button className="equals" onClick={equalsFunc}>=</button>
                 </div>
             </div>
         </div>
