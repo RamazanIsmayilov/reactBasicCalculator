@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 export const Calculator = () => {
-
-    const [operator, setOperator] = useState(null);
+    const [value, setValue] = useState(null);
 
 
     const resetFunc = () => {
 
     }
 
-    const plusMinusFunc = () => {
+    const clearFunc = () => {
 
     }
 
@@ -34,11 +33,11 @@ export const Calculator = () => {
             <div className="calculator mt-5">
                 <input type="text" className='form-control' id='result' />
                 <div className="buttons mt-4 gap-3">
-                    <button className="clear" onClick={resetFunc}>C</button>
-                    <button className="operator plus-minus" onClick={plusMinusFunc}>+/-</button>
-                    <button className="operator percentage" onClick={percentFunc}>%</button>
-                    <button className="operator" onClick={operatorFunc}>/</button>
-                    <button className="number" onClick={numberFunc}>7</button>
+                    <button className="clear">C</button>
+                    <button className="operator plus-minus">x</button>
+                    <button className="operator percentage">%</button>
+                    <button className="operator" onClick={operatorFunc} >/</button>
+                    <button className="number" onClick={numberFunc} >7</button>
                     <button className="number" onClick={numberFunc}>8</button>
                     <button className="number" onClick={numberFunc}>9</button>
                     <button className="operator" onClick={operatorFunc}>*</button>
